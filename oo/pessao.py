@@ -8,9 +8,10 @@ class Pessoa:
 if __name__ == '__main__':
     cleyton =Pessoa(nome='Cleyton')
     luciano = Pessoa(cleyton, nome='Luciano')
-
     for filho in luciano.filhos:
         print(filho.nome)
+
+
 
 
 
