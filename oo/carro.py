@@ -1,3 +1,6 @@
+
+
+
 """
 Voçê deve criar uma classe carro que vai possuir dois atributos compostos por outras duas classes:
 1) Motor
@@ -20,19 +23,22 @@ O   L
 
 
     Exemplo:
-    >>>#Testando Motor
+    >>> #Testando Motor
     >>> motor = Motor()
     >>> motor.velocidade
     0
-    >>> motor =acelerar()
+    >>> motor = acelerar()
     >>> motor.velocidade
     1
-    >>> motor =acelerar()
+    >>> motor = acelerar()
     >>> motor.velocidade
     2
-    >>> motor =acelerar()
+    >>> motor = acelerar()
     >>> motor.velocidade
     3
+    >>> motor.frear()
+    >>> motor.velocidade
+    1
     >>> motor.frear()
     >>> motor.velocidade
     0
@@ -87,7 +93,17 @@ O   L
     >>> carro.girar_a_direita()
     >>> carro.calcular_direcao()
     >>> 'Oeste'
-
-
-
 """
+
+class Motor():
+    def __init__(self):
+        self.velocidade = 0
+    def acelerar(self):
+        self.acelerar += 1
+    def frear(self):
+        self.acelerar -= 2
+        self.velocidade = max(0, self.velocidade)
+
+
+
+
